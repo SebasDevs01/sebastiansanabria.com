@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="luxuryGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5D061;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#E1B64F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C38D2F;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#E1B64F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5D061;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle with Gold Border -->
+  <circle cx="32" cy="32" r="30" fill="#050505" stroke="url(#luxuryGold)" stroke-width="1.5"/>
+  
+  <!-- Inner Ring (Thin) -->
+  <circle cx="32" cy="32" r="26" fill="none" stroke="url(#luxuryGold)" stroke-width="0.5" opacity="0.7"/>
+
+  <!-- Monogram SS -->
+  <g font-family="'Playfair Display', 'Didot', 'Times New Roman', serif" font-weight="bold" fill="url(#luxuryGold)" filter="url(#glow)">
+    <!-- First S -->
+    <text x="24" y="42" font-size="34" text-anchor="middle">S</text>
+    <!-- Second S (Offset) -->
+    <text x="40" y="42" font-size="34" text-anchor="middle">S</text>
+  </g>
+</svg>

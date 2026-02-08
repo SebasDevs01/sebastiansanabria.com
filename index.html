@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastián Sanabria | Sitio Oficial</title>
+    <meta name="description"
+        content="Sitio oficial de Sebastián Sanabria, cantante y compositor de Pop Romántico y Balada. Escucha su música, conoce su historia y contáctalo.">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <h2 class="loader-text">SEBASTIÁN SANABRIA</h2>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header id="header">
+        <div class="container navbar">
+            <div class="logo">
+                <a href="#hero">SEBASTIÁN SANABRIA</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#biografia">Biografía</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#musica">Música</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <span class="close-menu">&times;</span>
+        <ul class="mobile-nav-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#biografia">Biografía</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#musica">Música</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <canvas id="particles-canvas"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in-up">
+            <h1>SEBASTIÁN SANABRIA</h1>
+            <p class="subtitle">Pop Romántico & Balada</p>
+            <a href="https://open.spotify.com/artist/YOUR_SPOTIFY_ID" target="_blank" class="btn-cta">Escuchar en
+                Spotify</a>
+        </div>
+    </section>
+
+    <!-- Sobre Mí / Biografía -->
+    <section id="biografia" class="section">
+        <div class="container bio-container">
+            <div class="bio-image fade-in-left">
+                <!-- Placeholder image based on user request for "looking down" photo here if available via assets -->
+                <img src="assets/img/perfil.jpg" alt="Sebastián Sanabria"
+                    onerror="this.src='https://placehold.co/600x800?text=Foto+Perfil'">
+            </div>
+            <div class="bio-text fade-in-right">
+                <h2>Sobre Mí</h2>
+                <p>Sebastián Sanabria es un cantante y compositor nacido en Bucaramanga, Colombia (2004). Influenciado
+                    por grandes voces del pop romántico como Sebastián Yatra, inició su carrera a los 10 años. Músico
+                    independiente y guitarrista, Sebastián busca expresar sus sentimientos más profundos a través de sus
+                    letras. Para él, la música es un regalo de Dios y la forma más honesta de retribuir a la sociedad.
+                </p>
+                <blockquote class="quote">
+                    "La música me ayudó a mostrarme tal cual soy... quisiera mostrarle a la gente que la música es lo
+                    más bonito que podemos retribuirle a nuestra sociedad."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería (Carrusel) -->
+    <section id="galeria" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title fade-in-up">Galería</h2>
+            <div class="carousel-container fade-in-up">
+                <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-slide">
+                    <img src="assets/img/foto1.jpg" alt="Foto 1" class="active"
+                        onerror="this.src='https://placehold.co/1200x800?text=Foto+1'">
+                    <img src="assets/img/foto2.jpg" alt="Foto 2"
+                        onerror="this.src='https://placehold.co/1200x800?text=Foto+2'">
+                    <img src="assets/img/foto3.jpg" alt="Foto 3"
+                        onerror="this.src='https://placehold.co/1200x800?text=Foto+3'">
+                </div>
+                <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Música (Discografía) -->
+    <section id="musica" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in-up">Últimos Lanzamientos</h2>
+            <div class="music-platforms fade-in-up">
+                <a href="https://open.spotify.com/artist/LINK_SPOTIFY" target="_blank" class="platform-btn spotify"><i
+                        class="fab fa-spotify"></i> Spotify</a>
+                <a href="https://music.apple.com/co/artist/sebasti%C3%A1n-sanabria/1578131467" target="_blank"
+                    class="platform-btn apple"><i class="fab fa-apple"></i> Apple Music</a>
+            </div>
+
+            <div class="spotify-embeds fade-in-up">
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/artist/6Ii7IJH1Ip7DZVbcPDunBc?utm_source=generator" width="100%"
+                    height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos -->
+    <section id="videos" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title fade-in-up">Videos</h2>
+            <div class="video-grid fade-in-up">
+                <!-- Video 1 -->
+                <div class="video-item">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/qu1780O9UPw"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <!-- Video 2 -->
+                <div class="video-item">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Fl2pSNzyE2Y"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="center-btn">
+                <a href="https://www.youtube.com/@sebastiansanabriamusic" target="_blank" class="btn-secondary">Ver más
+                    en YouTube</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer id="contacto">
+        <div class="container footer-content">
+            <div class="contact-form-wrapper fade-in-up">
+                <h3>Contacto</h3>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                </form>
+            </div>
+
+            <div class="social-links fade-in-up">
+                <a href="https://www.facebook.com/sebastiansanabriaofficial?locale=es_LA" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/sebastiansanabriaofficial/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@sebastiansanabriamusic" target="_blank"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@sebastiansanabriaoficial" target="_blank"><i
+                        class="fab fa-tiktok"></i></a>
+                <a href="https://open.spotify.com/artist/LINK_SPOTIFY" target="_blank"><i
+                        class="fab fa-spotify"></i></a>
+                <a href="https://music.apple.com/co/artist/sebasti%C3%A1n-sanabria/1578131467" target="_blank"><i
+                        class="fab fa-apple"></i></a>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 Sebastián Sanabria. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/573138432479?text=Hola%20Sebasti%C3%A1n%2C%20quisiera%20contratarte%20para%20un%20evento%2C%20vengo%20de%20tu%20sitio%20web%20oficial."
+        class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
