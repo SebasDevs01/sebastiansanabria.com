@@ -836,7 +836,7 @@ img {
 }
 
 .loader-text {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: clamp(1.1rem, 6vw, 2rem);
     color: var(--primary-color);
     margin-bottom: 20px;
