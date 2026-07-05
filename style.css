@@ -336,7 +336,7 @@ img {
     margin: 0 auto;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .carousel-slide {
@@ -347,6 +347,10 @@ img {
 .carousel-slide img {
     width: 100%;
     flex-shrink: 0;
+    height: 520px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
 }
 
 .carousel-btn {
@@ -695,6 +699,10 @@ img {
         margin-bottom: 30px;
     }
 
+    .carousel-slide img {
+        height: 380px;
+    }
+
     .section-title {
         font-size: 2rem;
         margin-bottom: 40px;
@@ -762,6 +770,10 @@ img {
     .quote {
         font-size: 1.05rem;
         padding-left: 15px;
+    }
+
+    .carousel-slide img {
+        height: 260px;
     }
 
     .carousel-btn {
