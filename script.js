@@ -148,6 +148,29 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // Reliable Iframe Lazy Loading (Spotify & YouTube)
+    // Uses data-src pattern instead of native loading="lazy" which is unreliable on mobile
+    const iframeLazyObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const iframe = entry.target;
+                const src = iframe.getAttribute('data-src');
+                if (src && iframe.src !== src) {
+                    iframe.src = src;
+                }
+                obs.unobserve(iframe);
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '300px', // Start loading 300px before it enters the viewport
+        threshold: 0
+    });
+
+    document.querySelectorAll('iframe[data-src]').forEach(iframe => {
+        iframeLazyObserver.observe(iframe);
+    });
+
     // Preloader Logic
     window.addEventListener('load', () => {
         document.body.classList.add('loaded');

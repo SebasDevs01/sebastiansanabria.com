@@ -140,11 +140,12 @@
             </div>
 
             <div class="spotify-embeds fade-in-up">
-                <iframe style="border-radius:12px"
-                    src="https://open.spotify.com/embed/artist/6Ii7IJH1Ip7DZVbcPDunBc?utm_source=generator" width="100%"
-                    height="352" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
+                <iframe id="spotify-embed" style="border-radius:12px"
+                    data-src="https://open.spotify.com/embed/artist/6Ii7IJH1Ip7DZVbcPDunBc?utm_source=generator"
+                    src="about:blank"
+                    width="100%" height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe>
             </div>
         </div>
     </section>
@@ -156,15 +157,21 @@
             <div class="video-grid fade-in-up">
                 <!-- Video 1 -->
                 <div class="video-item">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/qu1780O9UPw"
-                        title="YouTube video player" frameborder="0"
+                    <iframe width="100%" height="315"
+                        data-src="https://www.youtube-nocookie.com/embed/qu1780O9UPw"
+                        src="about:blank"
+                        title="Elvis Presley Can't Help Falling In Love With You - Sebastián Sanabria"
+                        frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
                 <!-- Video 2 -->
                 <div class="video-item">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Fl2pSNzyE2Y"
-                        title="YouTube video player" frameborder="0"
+                    <iframe width="100%" height="315"
+                        data-src="https://www.youtube-nocookie.com/embed/Fl2pSNzyE2Y"
+                        src="about:blank"
+                        title="Tu Poeta (Acústico) - Sebastián Sanabria"
+                        frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
