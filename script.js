@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = contactForm.querySelector('input[type="email"]').value;
             const message = contactForm.querySelector('textarea').value;
 
-            const destinationEmail = "jhonsanabria407@gmail.com";
+            const destinationEmail = "sebasanabriamusic@gmail.com";
             const subject = encodeURIComponent("Contratar para evento - Sebastián Sanabria");
             const body = encodeURIComponent(
                 `Hola, soy ${name}.\n\n` +
