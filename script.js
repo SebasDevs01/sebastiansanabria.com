@@ -46,10 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (index < 0) index = slides.length - 1;
         if (index >= slides.length) index = 0;
 
-        // Hide all slides (simple implementation for this structure)
+        // Use the container's pixel width for the offset (not the flex row's full width)
         const slideContainer = document.querySelector('.carousel-slide');
-        if (slideContainer) {
-            slideContainer.style.transform = `translateX(-${index * 100}%)`;
+        const carouselContainer = document.querySelector('.carousel-container');
+        if (slideContainer && carouselContainer) {
+            const containerWidth = carouselContainer.offsetWidth;
+            slideContainer.style.transform = `translateX(-${index * containerWidth}px)`;
         }
 
         // Update dots
