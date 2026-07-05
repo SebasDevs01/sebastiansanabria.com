@@ -828,6 +828,7 @@ img {
     align-items: center;
     z-index: 9999;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    overflow: hidden;
 }
 
 .loader-content {
@@ -836,11 +837,17 @@ img {
 
 .loader-text {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: clamp(1.1rem, 6vw, 2rem);
     color: var(--primary-color);
     margin-bottom: 20px;
-    letter-spacing: 3px;
+    letter-spacing: clamp(1px, 1.5vw, 3px);
     animation: pulse 2s infinite;
+    padding: 0 20px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 .loader-line {
