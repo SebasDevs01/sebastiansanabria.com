@@ -332,10 +332,10 @@ img {
 /* Gallery / Carousel */
 .carousel-container {
     position: relative;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -348,8 +348,9 @@ img {
 .carousel-slide img {
     flex: 0 0 100%;
     width: 100%;
-    aspect-ratio: 1 / 1;
+    height: 600px;
     object-fit: cover;
+    object-position: center center;
     display: block;
 }
 
@@ -704,6 +705,10 @@ img {
         margin-bottom: 40px;
     }
 
+    .carousel-slide img {
+        height: 380px;
+    }
+
     .bio-text h2 {
         font-size: 2rem;
     }
@@ -757,6 +762,10 @@ img {
 
     .bio-text h2 {
         font-size: 1.6rem;
+    }
+
+    .carousel-slide img {
+        height: 320px;
     }
 
     .bio-text p {
