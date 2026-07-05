@@ -192,6 +192,12 @@ img {
     right: 30px;
     font-size: 2.5rem;
     cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-menu:hover {
+    color: var(--primary-color);
+    transform: rotate(90deg);
 }
 
 .mobile-nav-links li {
@@ -203,11 +209,20 @@ img {
     font-size: 1.5rem;
     font-family: var(--font-heading);
     color: var(--text-color);
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a:focus {
+    color: var(--primary-color);
+    transform: scale(1.1);
 }
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100dvh;
     background: url('./assets/img/bannerweb.png') no-repeat center center/cover;
     position: relative;
     display: flex;
@@ -391,6 +406,7 @@ img {
     justify-content: center;
     gap: 20px;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .platform-btn {
@@ -452,6 +468,13 @@ img {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-item iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    display: block;
 }
 
 .center-btn {
@@ -619,16 +642,38 @@ img {
 
 /* Responsive */
 @media (max-width: 992px) {
+    .section {
+        padding: 60px 0;
+    }
+
     .hero h1 {
         font-size: 3rem;
     }
 
     .bio-container {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .bio-image {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bio-text h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .bio-text p {
+        text-align: justify;
+    }
+
+    .quote {
+        max-width: 500px;
+        margin: 0 auto;
     }
 }
 
@@ -647,26 +692,107 @@ img {
 
     .hero .subtitle {
         font-size: 1.3rem;
+        margin-bottom: 30px;
     }
 
     .section-title {
         font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .bio-text h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .music-platforms {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .platform-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
     .section {
         padding: 50px 0;
     }
 
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .logo a {
+        font-size: 1.15rem;
+    }
+
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         letter-spacing: 2px;
+    }
+
+    .hero .subtitle {
+        font-size: 1.1rem;
     }
 
     .btn-cta {
         padding: 10px 20px;
         font-size: 0.8rem;
+    }
+
+    .bio-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .bio-text p {
+        font-size: 0.95rem;
+    }
+
+    .quote {
+        font-size: 1.05rem;
+        padding-left: 15px;
+    }
+
+    .carousel-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1.6rem;
     }
 }
 
