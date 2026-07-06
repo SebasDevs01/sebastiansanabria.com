@@ -33,24 +33,10 @@
         </div>
     </div>
     <script>
-        // Preloader: hide when BOTH 1.5s minimum AND page load are done
-        (function() {
-            var timerDone = false;
-            var loadDone = false;
-            function hidePreloader() {
-                if (timerDone && loadDone) {
-                    document.body.classList.add('loaded');
-                }
-            }
-            setTimeout(function() {
-                timerDone = true;
-                hidePreloader();
-            }, 1500);
-            window.addEventListener('load', function() {
-                loadDone = true;
-                hidePreloader();
-            });
-        })();
+        // Preloader: hide after exactly 1.5 seconds so it does not block on heavy assets
+        setTimeout(function() {
+            document.body.classList.add('loaded');
+        }, 1500);
     </script>
 
     <!-- Header / Navbar -->
@@ -163,8 +149,7 @@
                 <iframe style="border-radius:12px"
                     src="https://open.spotify.com/embed/artist/6Ii7IJH1Ip7DZVbcPDunBc?utm_source=generator"
                     width="100%" height="352" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy">
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
                 </iframe>
             </div>
         </div>
@@ -175,14 +160,14 @@
         <div class="container">
             <h2 class="section-title fade-in-up">Videos</h2>
             <div class="video-grid fade-in-up">
-                <!-- Video 1 -->
+                 <!-- Video 1 -->
                 <div class="video-item">
                     <iframe width="100%" height="315"
                         src="https://www.youtube-nocookie.com/embed/qu1780O9UPw"
                         title="Elvis Presley Can't Help Falling In Love With You - Sebastián Sanabria"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen loading="lazy"></iframe>
+                        allowfullscreen></iframe>
                 </div>
                 <!-- Video 2 -->
                 <div class="video-item">
@@ -191,7 +176,7 @@
                         title="Tu Poeta (Acústico) - Sebastián Sanabria"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen loading="lazy"></iframe>
+                        allowfullscreen></iframe>
                 </div>
             </div>
             <div class="center-btn">
