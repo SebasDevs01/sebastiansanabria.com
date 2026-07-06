@@ -150,10 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Preloader Logic — disappear after 1.5s (don't wait for all resources)
-    setTimeout(() => {
-        document.body.classList.add('loaded');
-    }, 1500);
+    // Preloader is handled by inline script in index.html for guaranteed timing
 
     // Particles Animation
     const canvas = document.getElementById('particles-canvas');
