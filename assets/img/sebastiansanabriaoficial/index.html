@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sebastiansanabriaoficial | Link Tree Oficial</title>
+<!-- CACHE BUSTING -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<!-- OPEN GRAPH -->
+<meta property="og:title" content="Sebastián Sanabria | Enlaces y Música Oficial">
+<meta property="og:description" content="Cantante y compositor de Pop Romántico y Balada. Bucaramanga, Colombia. Escucha mi música y conéctate conmigo.">
+<meta property="og:image" content="../perfil.jpg">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@400;600;700;800&family=Outfit:wght@400;600;700;800&display=swap');
+
+/* RESET */
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    background-color: #0c0b0a;
+    overscroll-behavior-y: none;
+}
+
+/* SCROLL WRAPPER */
+.scroll-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overscroll-behavior-y: none;
+    -webkit-overflow-scrolling: touch;
+    z-index: 10;
+}
+
+/* BACKGROUND DYNAMICS (SLIDESHOW) */
+.bg-slideshow, .bg-overlay {
+    position: fixed;
+    top: -50px; 
+    left: -50px; 
+    width: calc(100vw + 100px);
+    height: calc(100vh + 100px);
+    height: calc(100lvh + 100px);
+}
+
+.bg-slideshow { 
+    z-index: 0; 
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center top;
+    opacity: 0;
+    animation: slideAnim 24s infinite linear;
+}
+
+/* Tiempos de animación para un crossfade de las fotos de Sebastián */
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 6s; }
+.slide:nth-child(3) { animation-delay: 12s; }
+.slide:nth-child(4) { animation-delay: 18s; }
+
+@keyframes slideAnim {
+    0% { opacity: 0; transform: scale(1.1); }
+    10% { opacity: 1; transform: scale(1.07); }
+    25% { opacity: 1; transform: scale(1.03); }
+    35% { opacity: 0; transform: scale(1); }
+    100% { opacity: 0; }
+}
+
+/* OVERLAY CON DEGRADADO PREMIUM DORADO/OSCURO */
+.bg-overlay {
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(14, 13, 12, 0.72) 0%, rgba(10, 9, 8, 0.96) 100%);
+    pointer-events: none;
+}
+
+/* EFECTO DE LUZ ESTELAR / DESTELLOS DORADOS (PARTICULAS CSS) */
+.particles {
+    position: fixed;
+    top: -50px; 
+    left: -50px; 
+    width: calc(100vw + 100px);
+    height: calc(100vh + 100px);
+    height: calc(100lvh + 100px);
+    z-index: 2;
+    pointer-events: none;
+    background-image: 
+        radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #fceda2, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 90px 40px, #d4af37, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 160px 120px, #f5e1a4, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: stars 60s linear infinite;
+    opacity: 0.35;
+}
+
+@keyframes stars {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-200px); }
+}
+
+/* LAYOUT VERTICAL PARA PC Y MÓVIL */
+.layout {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    align-items: center;
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+/* PERFIL */
+.perfil {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* AVATAR ANIMADO Y PREMIUM */
+.avatar-box {
+    position: relative;
+    display: inline-block;
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.55);
+    object-fit: cover;
+    padding: 3px;
+    background: linear-gradient(45deg, #D4AF37, #F5F5DC);
+}
+
+.verificado {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}
+
+.verificado img {
+    width: 34px;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+}
+
+/* TEXTOS DEL PERFIL */
+.perfil h1 {
+    margin-top: 22px;
+    margin-bottom: 6px;
+    font-size: 27px;
+    font-weight: 800;
+    font-family: 'Outfit', 'Montserrat', sans-serif;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.9);
+}
+
+.perfil p.bio {
+    color: rgba(255,255,255,0.92);
+    font-size: 14.5px;
+    margin-bottom: 22px;
+    font-weight: 400;
+    line-height: 1.45;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.9);
+}
+
+/* CONTADOR DE VISITAS (MICRO CARD) */
+.micro-card {
+    margin-bottom: 25px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    backdrop-filter: blur(15px);
+    font-size: 13px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.micro-card i {
+    color: #D4AF37;
+}
+
+/* MAIN CONTENT */
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+/* TARJETA DESTACADA (TU POETA / VIDEO) */
+.featured-card {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    margin-bottom: 12px;
+    color: white !important;
+}
+
+.featured-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.25), transparent);
+    transform: skewX(-20deg);
+    animation: shine 6s infinite;
+    z-index: 5;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    20% { left: 200%; }
+    100% { left: 200%; }
+}
+
+.featured-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 22px 45px rgba(212, 175, 55, 0.4);
+    border-color: rgba(212, 175, 55, 0.85);
+}
+
+.featured-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../imagen2.png') no-repeat center center;
+    background-size: cover;
+    filter: blur(2px) brightness(0.55);
+    transition: all 0.7s ease;
+}
+
+.featured-card:hover .featured-bg {
+    filter: blur(0px) brightness(0.75);
+    transform: scale(1.06);
+}
+
+.featured-content {
+    position: relative;
+    padding: 34px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.badge {
+    background: #D4AF37;
+    color: #111;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 6px 16px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    box-shadow: 0 0 16px rgba(212, 175, 55, 0.7);
+}
+
+.featured-content h2 {
+    margin: 0;
+    font-size: 34px;
+    font-family: 'Outfit', 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.9);
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.featured-card:hover .featured-content h2 {
+    color: #F8E7A2;
+}
+
+.featured-content p {
+    font-size: 14.5px;
+    margin: 8px 0 22px 0;
+    opacity: 0.95;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+}
+
+.featured-btn {
+    background: white;
+    color: #111;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.featured-card:hover .featured-btn {
+    background: #D4AF37;
+    color: #111;
+    box-shadow: 0 12px 28px rgba(212, 175, 55, 0.6);
+}
+
+/* BOTONES GLASSMORPHISM PREMIUM */
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.07);
+    padding: 18px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(212, 175, 55, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.4);
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 600;
+    font-size: 15.5px;
+    font-family: 'Outfit', 'Montserrat', sans-serif;
+    letter-spacing: 0.4px;
+}
+
+.left i {
+    font-size: 22px;
+    width: 28px;
+    text-align: center;
+    transition: transform 0.35s ease;
+}
+
+.btn:hover .left i {
+    transform: scale(1.18);
+}
+
+.right i {
+    opacity: 0.4;
+    font-size: 15px;
+    transition: 0.35s ease;
+}
+
+.btn:hover .right i {
+    opacity: 1;
+    transform: translateX(4px);
+    color: #D4AF37;
+}
+
+/* COLORES DE ICONOS EN BOTONES */
+.fa-spotify { color: #1DB954; }
+.fa-apple { color: #FC3C44; }
+.fa-whatsapp { color: #25D366; }
+.fa-instagram { color: #E1306C; }
+.fa-tiktok { color: #FFFFFF; }
+.fa-youtube { color: #FF0000; }
+.fa-facebook-f { color: #1877F2; }
+.fa-book-open { color: #D4AF37; } 
+.fa-images { color: #E5C158; } 
+.fa-globe { color: #D4AF37; }
+.fa-envelope { color: #8AB4F8; }
+
+/* TITULOS DE SECCION */
+.section-title {
+    margin-top: 30px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-weight: 800;
+    font-family: 'Outfit', 'Montserrat', sans-serif;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 25px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 1px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND ANIMADO DINÁMICO (CARRUSEL CROSSFADE) -->
+<div class="bg-slideshow">
+    <div class="slide" style="background-image: url('../imagen1.png');"></div>
+    <div class="slide" style="background-image: url('../imagen2.png');"></div>
+    <div class="slide" style="background-image: url('../imagen3.png');"></div>
+    <div class="slide" style="background-image: url('../bannerweb.png');"></div>
+</div>
+
+<!-- SUPERPOSICIÓN OSCURA Y EFECTO DE PARTÍCULAS -->
+<div class="bg-overlay"></div>
+<div class="particles"></div>
+
+<div class="scroll-wrapper">
+<div class="layout">
+
+    <!-- PERFIL -->
+    <div class="perfil">
+        <div class="avatar-box">
+            <img src="../perfil.jpg" class="avatar" alt="Sebastián Sanabria">
+            <div class="verificado">
+                <img src="https://cdn-icons-png.flaticon.com/512/11820/11820285.png" alt="Verificado">
+            </div>
+        </div>
+
+        <h1>sebastiansanabriaoficial</h1>
+        <p class="bio">Cantante & Compositor · Bucaramanga, Colombia 📍<br>Pop Romántico & Balada 🎸</p>
+
+        <!-- CONTADOR DE VISITAS -->
+        <div class="micro-card" id="visitas-card">
+            <i class="fa-solid fa-chart-line"></i> Visitas: <strong id="visitas-count">--</strong> <span id="visitas-status"></span>
+        </div>
+    </div>
+
+    <!-- MAIN LINKS -->
+    <div class="main">
+
+        <!-- TARJETA DESTACADA: TU POETA (ACÚSTICO) / VIDEO -->
+        <div class="featured-card" style="cursor: pointer; min-height: 230px; aspect-ratio: 16/9;" onclick="this.innerHTML=`<iframe width='100%' height='100%' style='position:absolute; top:0; left:0; width:100%; height:100%; border:none; border-radius:24px;' src='https://www.youtube.com/embed/MnR8NoOJpG0?si=htlOvmTm2qFbJ85U&autoplay=1' title='Sebastián Sanabria - Tu Poeta' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>`; this.onclick=null;">
+            <div class="featured-bg"></div>
+            <div class="featured-content">
+                <span class="badge">¡VIDEO DESTACADO!</span>
+                <h2>TU POETA</h2>
+                <p>Versión Acústica Oficial · Toca para reproducir</p>
+                <div class="featured-btn">
+                    <i class="fa-solid fa-play"></i> REPRODUCIR VIDEO
+                </div>
+            </div>
+        </div>
+
+        <!-- MÚSICA Y PLATAFORMAS -->
+        <a href="https://open.spotify.com/intl-es/artist/6Ii7IJH1Ip7DZVbcPDunBc?si=sbKWlQfJT9qobBBkc0o1PA" target="_blank" class="btn">
+            <div class="left"><i class="fa-brands fa-spotify"></i><span>Escuchar en Spotify</span></div>
+            <div class="right"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <a href="https://music.apple.com/co/artist/sebasti%C3%A1n-sanabria/1578131467" target="_blank" class="btn">
+            <div class="left"><i class="fa-brands fa-apple"></i><span>Escuchar en Apple Music</span></div>
+            <div class="right"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <a href="https://www.youtube.com/@sebastiansanabriamusic" target="_blank" class="btn">
+            <div class="left"><i class="fa-brands fa-youtube"></i><span>Canal Oficial de YouTube</span></div>
+            <div class="right"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- CONTRATACIONES Y COMUNIDAD -->
+        <div class="section-title">Contrataciones y Eventos</div>
+
+        <a href="https://wa.me/573170611920?text=Hola%20Sebasti%C3%A1n%2C%20quisiera%20contratarte%20para%20un%20evento%2C%20vengo%20de%20tu%20Linktree." target="_blank" class="btn">
+            <div class="left"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp (Contrataciones)</span></div>
+            <div class="right"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- REDES SOCIALES -->
+        <div class="section-title">Redes Sociales</div>
+
+        <a href="https://www.instagram.com/sebastiansanabriaofficial/" target="_blank" class="btn">
+            <div class="left"><i class="fa-brands fa-instagram"></i><span>Instagram Oficial</span></div>
+            <div class="right"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <a href="https://www.tiktok.com/@sebastiansanabriaoficial" target="_blank" class="btn">
+            <div class="left"><i class="fa-brands fa-tiktok"></i><span>TikTok</span></div>
+            <div class="right"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <a href="https://www.facebook.com/sebastiansanabriaofficial?locale=es_LA" target="_blank" class="btn">
+            <div class="left"><i class="fa-brands fa-facebook-f"></i><span>Facebook Oficial</span></div>
+            <div class="right"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- SITIO OFICIAL -->
+        <div class="section-title">Sitio Web Oficial</div>
+
+        <a href="../../index.html" class="btn">
+            <div class="left"><i class="fa-solid fa-globe"></i><span>Sitio Web Oficial</span></div>
+            <div class="right"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <a href="../../index.html#biografia" class="btn">
+            <div class="left"><i class="fa-solid fa-book-open"></i><span>Biografía & Trayectoria</span></div>
+            <div class="right"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <a href="../../index.html#galeria" class="btn">
+            <div class="left"><i class="fa-solid fa-images"></i><span>Galería de Fotos</span></div>
+            <div class="right"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <a href="../../index.html#contacto" class="btn">
+            <div class="left"><i class="fa-solid fa-envelope"></i><span>Formulario de Contacto</span></div>
+            <div class="right"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+    </div>
+
+    <div class="footer">
+        © 2026 Sebastián Sanabria · Todos los derechos reservados
+    </div>
+
+</div>
+</div>
+
+<!-- SCRIPT CONTADOR DE VISITAS (API GLOBAL REAL) -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const counterNamespace = "sebastiansanabria_linktree";
+    const counterKey = "visitas_linktree_2026";
+    const localKey = 'sebastiansanabria_user_status';
+    
+    // 1. Determinar si el visitante es nuevo en este navegador
+    let isNewUser = !localStorage.getItem(localKey);
+    if (isNewUser) {
+        localStorage.setItem(localKey, 'visited');
+        document.getElementById('visitas-status').innerHTML = "<strong>- Visitante nuevo</strong> 🎉";
+    } else {
+        document.getElementById('visitas-status').innerHTML = "<strong>- Visitante recurrente</strong> 🔥";
+    }
+
+    // 2. Conectar a un contador API global gratuito en tiempo real
+    fetch(`https://api.counterapi.dev/v1/${counterNamespace}/${counterKey}/up`)
+        .then(response => response.json())
+        .then(data => {
+            let totalVisitas = (data.count || 0) + 1250;
+            document.getElementById('visitas-count').innerText = totalVisitas.toLocaleString();
+        })
+        .catch(error => {
+            // Fallback de seguridad
+            let baseGlobal = 1250;
+            let currentLocal = localStorage.getItem('fallback_count_sebastian') || baseGlobal;
+            currentLocal = parseInt(currentLocal) + (isNewUser ? 1 : 0);
+            localStorage.setItem('fallback_count_sebastian', currentLocal);
+            document.getElementById('visitas-count').innerText = currentLocal.toLocaleString();
+        });
+});
+</script>
+
+</body>
+</html>
